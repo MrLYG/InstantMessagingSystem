@@ -59,7 +59,7 @@ func (this *Server) Handler(conn net.Conn) {
 	this.mapLock.Unlock()
 
 	//广播当前用户上线消息
-	this.BroadCast(user, "已上线")
+	this.BroadCast(user, "logined")
 
 	//当前handler阻塞
 	select {}
